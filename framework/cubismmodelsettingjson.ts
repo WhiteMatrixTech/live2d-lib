@@ -188,7 +188,7 @@ export class CubismModelSettingJson extends ICubismModelSetting {
       .getValueByIndex(0)
       .getRawString();
 
-    const pathArray = texturePath.split('/');
+      const pathArray = texturePath?.split('/') || []
     // 最後の要素はテクスチャ名なので不要
     const arrayLength = pathArray.length - 1;
     let textureDirectoryStr = '';
